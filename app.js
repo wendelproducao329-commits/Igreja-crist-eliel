@@ -1,8 +1,8 @@
 // CONFIGURAÇÃO: substitua pelos dados do projeto Supabase da igreja.
 // Use somente a URL do projeto e a chave pública anon/publishable.
 // NUNCA coloque a chave service_role aqui.
-const SUPABASE_URL = "COLOQUE_AQUI_A_URL_DO_PROJETO";
-const SUPABASE_ANON_KEY = "COLOQUE_AQUI_A_CHAVE_PUBLICA";
+const SUPABASE_URL =https://pemiqfspbjfbrqtzczgv.supabase.co;
+const SUPABASE_ANON_KEY = sb_publishable_KKh11lNJzJNWRMTM01X0CQ_g113ik2Z;
 let sb = null, sessionUser = null, profile = null, ministries = [];
 const $ = (id) => document.getElementById(id);
 const ready = () => SUPABASE_URL.startsWith("https://") && !SUPABASE_ANON_KEY.startsWith("COLOQUE");
