@@ -1,0 +1,60 @@
+IGREJA CRISTÃ ELIEL — SISTEMA ADMINISTRATIVO (BASE FUNCIONAL)
+
+Arquivos:
+- admin.html: tela de login e painel administrativo responsivo.
+- app.js: autenticação Supabase, leitura/gravação de eventos, notícias e mídias, filtragem por ministério.
+- supabase_schema.sql: tabelas, perfis, ministérios e políticas de segurança RLS.
+
+O que já está preparado:
+- Pastores: papel `pastor`, administração geral.
+- Líderes: papel `leader`, limitado ao ministry_id associado.
+- Regras de acesso aplicadas no banco Supabase por Row Level Security (RLS).
+- Cadastros de eventos, notícias e links de mídia.
+- Lista inicial dos oito ministérios da Igreja Cristã Eliel.
+
+O que falta para ativar:
+1. Criar um projeto em https://supabase.com/.
+2. No SQL Editor, executar todo o arquivo `supabase_schema.sql`.
+3. Em Authentication > Providers, manter Email habilitado. Desabilitar signups públicos (não permitir cadastro aberto).
+4. Copiar Project URL e chave pública anon/publishable do projeto.
+5. Colar os dois valores nas constantes SUPABASE_URL e SUPABASE_ANON_KEY no início de app.js.
+6. Criar usuários em Authentication > Users (convites/criação controlada).
+7. Para cada usuário, inserir/ajustar a linha em public.profiles:
+   - id = UUID do usuário em Authentication > Users
+   - full_name = nome
+   - role = 'pastor' ou 'leader'
+   - ministry_id = UUID do ministério (obrigatório para líder; pode ser NULL para pastor)
+   Exemplo para promover o usuário existente a pastor:
+   insert into public.profiles(id, full_name, role)
+   values ('UUID-DO-USUARIO', 'Nome do Pastor', 'pastor');
+   Exemplo para líder:
+   insert into public.profiles(id, full_name, role, ministry_id)
+   select 'UUID-DO-USUARIO', 'Nome do Líder', 'leader', id
+   from public.ministries where slug='louvor';
+8. Hospedar os arquivos admin.html e app.js em hospedagem HTTPS. A página pública poderá ser colocada na mesma hospedagem.
+9. Testar com uma conta de pastor e uma de líder de ministério diferente.
+
+SEGURANÇA:
+- Nunca inserir a service_role key no navegador.
+- RLS é a barreira real de autorização; a interface também filtra o que o usuário vê.
+- Use senhas individuais, convites controlados e HTTPS.
+- Faça testes com contas separadas antes de disponibilizar o painel.
+- Este pacote ainda não está conectado a um projeto Supabase real porque a igreja ainda precisa criar/autorizar esse projeto e fornecer sua URL e chave pública.
+- Upload binário de arquivos e integração Instagram/Meta não estão incluídos nesta etapa; o formulário atual cadastra URLs públicas de mídia.
+- Para produção, recomenda-se configurar recuperação de senha, política de privacidade, backups e domínio.
+
+O arquivo index.html é a página pública inicial do site. admin.html é o painel privado.
+
+NOVA EXPERIÊNCIA DE CONTEÚDO — ELIEL PLAY
+- A página pública agora inclui uma prévia visual com fileiras horizontais estilo streaming.
+- Os cards podem ser selecionados e abrem uma janela de detalhes.
+- As imagens/categorias atuais são apenas demonstração, não são publicações reais da igreja.
+- Instagram: integrar API oficial da Meta para buscar mídias de @ice_church. O painel poderá permitir classificação em categorias (Louvor, Jovens, Mensagens, Cultos etc.). A API não atribui automaticamente essas categorias.
+- YouTube: após criação do canal, fornecer URL/handle ou ID do canal. Poderemos exibir vídeos recentes e incorporar vídeos selecionados usando os recursos oficiais de incorporação/API.
+- O canal do YouTube ainda não foi criado/conectado; nenhum link de canal foi inventado.
+
+ELIEL PLAY — DUAS FORMAS DE VISUALIZAÇÃO
+- Prévia rápida: selecionar um card abre uma janela/modal com imagem, descrição e atalhos.
+- Página completa: no modal, escolher "Abrir página completa" abre uma página dedicada de conteúdo.
+- O player está como espaço reservado nesta demonstração. A reprodução real depende de conectar a fonte (Instagram/YouTube) e usar URLs/IDs autorizados.
+- Vídeos do YouTube podem ser incorporados com player oficial. Conteúdos do Instagram podem ser incorporados quando a publicação permitir; alguns formatos/contas podem exigir abrir a publicação no Instagram.

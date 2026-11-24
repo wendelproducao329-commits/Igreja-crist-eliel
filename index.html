@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Igreja Cristã Eliel</title>
+<style>
+:root{--g:#173d33;--g2:#244d40;--cream:#f3efe6;--sand:#d9cbb2;--ink:#202923;--muted:#68736c;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:absolute;top:0;left:0;right:0;color:white;z-index:2}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff40}.brand{font-weight:800;letter-spacing:.16em;font-size:.82rem}.brand small{display:block;font-size:.58rem;font-weight:500;letter-spacing:.24em;margin-top:5px;opacity:.75}.links{display:flex;gap:25px;align-items:center;font-size:.83rem}.links a:hover{color:var(--sand)}.links .pill{border:1px solid #ffffff88;padding:10px 14px}
+.hero{min-height:730px;display:flex;align-items:end;color:white;background:linear-gradient(90deg,#091b16d9,#091b1680 55%,#091b1630),linear-gradient(0deg,#091b1670,transparent 60%),url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=2000&q=85') center/cover}.hero .wrap{padding:175px 0 90px}.eyebrow,.kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.22em;font-weight:800;color:var(--sand)}h1,h2,.serif{font-family:Georgia,serif;font-weight:400}h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.05;letter-spacing:-.035em;margin:22px 0}.hero p{max-width:560px;line-height:1.8;color:#ffffffd0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 19px;font-size:.82rem;font-weight:750;border:1px solid transparent}.light{background:var(--cream);color:var(--g)}.outline{border-color:#ffffff99;color:white}.section{padding:88px 0}.vision{background:#e9e3d7}.two{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}h2{font-size:clamp(2.1rem,4vw,3.5rem);color:var(--g);line-height:1.1;margin:12px 0}.quote{font-family:Georgia,serif;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.28;color:var(--g);border-left:2px solid #a88e69;padding-left:25px}.muted{color:var(--muted);line-height:1.85}.green{background:var(--g);color:white}.green h2{color:white}.green .kicker{color:var(--sand)}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:35px}.card{border:1px solid #ffffff40;padding:28px}.day{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);font-weight:800}.time{font:3rem Georgia,serif;margin:14px 0 4px}.community-img{min-height:390px;background:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1300&q=85') center/cover}.insta{background:#e9e3d7}.insta-box{background:var(--g);color:white;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}.insta-box p{color:#ffffffbb}.location{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}.map{background:#ded8cc;min-height:260px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--g)}footer{background:#102b24;color:white;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.small{font-size:.78rem;color:#ffffff88;line-height:1.7}
+@media(max-width:720px){.links{display:none}.hero{min-height:690px}.hero .wrap{padding:145px 0 65px}.section{padding:65px 0}.two,.location{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:1fr}.community-img{min-height:300px}.insta-box,.foot{display:block}.insta-box .btn{margin-top:15px}.foot .small{margin-top:18px}}
+
+/* Eliel Play */
+.play-section{background:#102b24;color:#fff;padding:82px 0}
+.play-section h2{color:#fff}.play-section .muted{color:#ffffffa8}
+.play-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+.play-brand{font-weight:900;letter-spacing:.18em;color:#d9cbb2;font-size:.78rem}
+.play-row{display:flex;gap:15px;overflow-x:auto;padding:6px 2px 20px;scroll-snap-type:x mandatory}
+.play-row::-webkit-scrollbar{height:7px}.play-row::-webkit-scrollbar-thumb{background:#49685d;border-radius:10px}
+.play-card{flex:0 0 205px;scroll-snap-align:start;background:#1c4035;border-radius:8px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;border:1px solid #ffffff16}
+.play-card:hover{transform:scale(1.045);box-shadow:0 12px 28px #0007}
+.play-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.play-card div{padding:12px}.play-card strong{display:block;font-size:.88rem}.play-card small{display:block;color:#ffffff9c;margin-top:5px;font-size:.72rem}
+.play-subtitle{font:1.45rem Georgia,serif;color:#fff;margin:32px 0 13px}
+.youtube-feature{background:linear-gradient(100deg,#173d33,#244d40);color:#fff;padding:35px;display:flex;justify-content:space-between;align-items:center;gap:30px;border:1px solid #ffffff25}
+.youtube-feature h2{font-size:clamp(1.8rem,3vw,2.8rem);margin:10px 0;color:#fff}
+.youtube-feature p{max-width:550px;color:#ffffffb8;line-height:1.7}
+.play-modal{position:fixed;inset:0;background:#06130fe8;z-index:20;display:none;align-items:center;justify-content:center;padding:20px}
+.play-modal.open{display:flex}.modal-box{width:min(700px,100%);background:#173d33;color:#fff;border:1px solid #ffffff30;border-radius:12px;overflow:hidden;position:relative}
+.modal-box img{width:100%;max-height:360px;object-fit:cover;display:block}.modal-copy{padding:22px}.modal-copy p{color:#ffffffb8;line-height:1.7}.modal-close{position:absolute;right:12px;top:12px;border:0;border-radius:50%;width:38px;height:38px;background:#102b24;color:white;font-size:1.3rem;cursor:pointer}
+@media(max-width:720px){.play-section{padding:65px 0}.play-top{display:block}.play-card{flex-basis:165px}.youtube-feature{display:block;padding:25px}.youtube-feature .btn{margin-top:15px}}
+
+
+.content-page{display:none;position:fixed;inset:0;z-index:30;overflow-y:auto;background:#102b24;color:white}
+.content-page.active{display:block}
+.content-page-top{height:74px;padding:0 max(22px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;background:#102b24;position:sticky;top:0;z-index:3;border-bottom:1px solid #ffffff20}
+.content-page-hero{position:relative;min-height:420px;display:flex;align-items:end;overflow:hidden}
+.content-page-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.content-page-shade{position:absolute;inset:0;background:linear-gradient(90deg,#102b24ed,#102b2470 60%,#102b2430),linear-gradient(0deg,#102b24,transparent 70%)}
+.content-page-title{position:relative;z-index:1;width:min(1120px,calc(100% - 44px));margin:0 auto;padding:70px 0 55px}
+.content-page-title h1{font-size:clamp(2.4rem,5vw,4.6rem);margin:12px 0;color:#fff}
+.content-page-title p{max-width:620px;color:#ffffffc2;line-height:1.8}
+.content-page-body{width:min(1120px,calc(100% - 44px));margin:0 auto;padding:42px 0 75px;display:grid;grid-template-columns:1.5fr .8fr;gap:35px;align-items:start}
+.content-player{background:#06130f;border:1px solid #ffffff20;border-radius:10px;overflow:hidden;aspect-ratio:16/9;display:grid;place-items:center}
+.content-player iframe{width:100%;height:100%;border:0}
+.player-placeholder{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:25px;color:#ffffffa8}
+.player-placeholder span{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#d9cbb2;color:#173d33;font-size:1.35rem}
+.player-placeholder strong{color:white}.player-placeholder small{max-width:360px;line-height:1.6}
+.content-info{background:#1a3b31;padding:24px;border-radius:9px}
+.content-info p{color:#ffffffbd;line-height:1.8;font-size:.9rem}
+@media(max-width:760px){.content-page-hero{min-height:360px}.content-page-body{grid-template-columns:1fr;padding-top:25px}.content-page-top{padding:0 17px}.content-page-title{width:calc(100% - 34px)}}
+
+</style></head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#">IGREJA CRISTÃ ELIEL<small>VALPARAÍSO DE GOIÁS</small></a><nav class="links"><a href="#visao">Nossa visão</a><a href="#cultos">Cultos</a><a href="#eliel-play">Eliel Play</a><a href="#comunidade">Comunidade</a><a href="#local">Como chegar</a><a class="pill" href="https://www.instagram.com/ice_church/" target="_blank">Instagram ↗</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Uma igreja • Uma caminhada • Uma visão</div><h1>Conhecer a Cristo.<br>Ser transformado por Ele.<br>Ser como Ele.</h1><p>Essa é a visão que orienta nossa caminhada como igreja: conhecer Jesus, ser transformados por sua graça e expressar seu caráter em tudo o que vivemos.</p><div class="actions"><a class="btn light" href="#cultos">Participe de um culto</a><a class="btn outline" href="https://www.instagram.com/ice_church/" target="_blank">Acompanhe no Instagram</a></div></div></section>
+<section class="section vision" id="visao"><div class="wrap two"><div><div class="kicker">Nossa visão</div><h2>Uma vida cada vez mais parecida com Cristo.</h2></div><div><div class="quote">Conhecer a Cristo.<br>Ser transformado por Ele.<br>Ser como Ele.</div><p class="muted">Mais do que palavras, essa visão aponta para uma jornada de fé. Queremos crescer no conhecimento de Cristo, permitir que Ele transforme nossa vida e refletir seu caráter em nossa comunidade e no mundo.</p></div></div></section>
+<section class="section green" id="cultos"><div class="wrap"><div class="kicker">Esperamos por você</div><h2>Nossos encontros</h2><p class="muted" style="color:#ffffffb8">Será uma alegria receber você e sua família.</p><div class="cards"><div class="card"><div class="day">Quinta-feira</div><div class="time">19h30</div><div class="muted" style="color:#ffffffa8">Culto</div></div><div class="card"><div class="day">Domingo</div><div class="time">18h00</div><div class="muted" style="color:#ffffffa8">Culto de celebração</div></div></div></div></section>
+<section class="section" id="comunidade"><div class="wrap two"><div class="community-img"></div><div><div class="kicker">Igreja é família</div><h2>Um lugar para caminhar em comunidade.</h2><p class="muted">A fé também é vivida lado a lado. Na Igreja Cristã Eliel, desejamos ser uma comunidade que acolhe, cresce no conhecimento de Cristo e serve com amor.</p><a class="btn" style="background:var(--g);color:white" href="https://www.instagram.com/ice_church/" target="_blank">Conheça nossa comunidade ↗</a></div></div></section>
+
+<section class="play-section" id="eliel-play">
+  <div class="wrap">
+    <div class="play-top">
+      <div><div class="play-brand">ELIEL PLAY</div><h2>Conteúdos que edificam.</h2></div>
+      <p class="muted" style="max-width:390px">Uma experiência para descobrir e assistir aos conteúdos da Igreja Cristã Eliel.</p>
+    </div>
+    <div class="play-subtitle">Novidades do Instagram</div>
+    <div class="play-row">
+      <article class="play-card" tabindex="0" role="button" onclick="openPlay('Louvor','Momentos de adoração e música da nossa comunidade.','https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85','LOUVOR')"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="Apresentação musical"><div><strong>Louvor</strong><small>Instagram · Prévia visual</small></div></article>
+      <article class="play-card" tabindex="0" role="button" onclick="openPlay('Jovens','Encontros, comunhão e atividades dos jovens.','https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85','JOVENS')"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80" alt="Grupo de jovens reunidos"><div><strong>Jovens</strong><small>Instagram · Prévia visual</small></div></article>
+      <article class="play-card" tabindex="0" role="button" onclick="openPlay('Mensagens','Trechos de pregações e reflexões bíblicas.','https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=85','MENSAGENS')"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80" alt="Pessoa falando em um palco"><div><strong>Mensagens</strong><small>Instagram · Prévia visual</small></div></article>
+      <article class="play-card" tabindex="0" role="button" onclick="openPlay('Cultos','Registros dos nossos encontros e celebrações.','https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=85','CULTOS')"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80" alt="Comunidade reunida"><div><strong>Cultos</strong><small>Instagram · Prévia visual</small></div></article>
+      <article class="play-card" tabindex="0" role="button" onclick="openPlay('Nossa comunidade','Ações, encontros e histórias da Igreja Cristã Eliel.','https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=85','COMUNIDADE')"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=700&q=80" alt="Voluntários em ação comunitária"><div><strong>Nossa comunidade</strong><small>Instagram · Prévia visual</small></div></article>
+    </div>
+    <div class="play-subtitle">Assista e acompanhe</div>
+    <div class="youtube-feature">
+      <div><div class="play-brand">CANAL OFICIAL</div><h2>Eliel no YouTube</h2><p>Pregações completas, séries bíblicas, cultos e transmissões. Quando o canal estiver criado, vamos conectar os vídeos mais recentes e permitir que sejam reproduzidos aqui mesmo.</p></div>
+      <a class="btn light" href="#youtube-info">Conhecer a integração</a>
+    </div>
+    <p class="muted" style="font-size:.76rem;margin-top:15px">As capas acima são apenas uma demonstração do formato. As publicações reais de @ice_church serão carregadas após a autorização da Meta.</p>
+  </div>
+</section>
+<div class="play-modal" id="playModal" onclick="if(event.target===this)closePlay()">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fechar" onclick="closePlay()">×</button>
+    <img id="modalImage" src="" alt="">
+    <div class="modal-copy">
+      <div class="play-brand">ELIEL PLAY · VISUALIZAÇÃO RÁPIDA</div>
+      <h2 id="modalTitle" style="color:white;margin:8px 0"></h2>
+      <p id="modalDescription"></p>
+      <div class="actions">
+        <button class="btn light" id="modalFullPage" type="button">Abrir página completa ↗</button>
+        <a class="btn outline" href="https://www.instagram.com/ice_church/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="contentPage" class="content-page" aria-live="polite">
+  <div class="content-page-top">
+    <button class="btn light" type="button" onclick="closeContentPage()">← Voltar ao Eliel Play</button>
+    <span class="play-brand">ELIEL PLAY</span>
+  </div>
+  <div class="content-page-hero">
+    <img id="pageImage" src="" alt="">
+    <div class="content-page-shade"></div>
+    <div class="content-page-title">
+      <div class="play-brand" id="pageCategory">CONTEÚDO</div>
+      <h1 id="pageTitle"></h1>
+      <p id="pageDescription"></p>
+    </div>
+  </div>
+  <div class="content-page-body">
+    <div class="content-player" id="contentPlayer">
+      <div class="player-placeholder"><span>▶</span><strong>Reprodutor de conteúdo</strong><small>O vídeo ou publicação será exibido aqui quando a integração estiver conectada.</small></div>
+    </div>
+    <aside class="content-info">
+      <div class="play-brand">SOBRE ESTE CONTEÚDO</div>
+      <p id="pageLongDescription"></p>
+      <a class="btn light" href="https://www.instagram.com/ice_church/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section insta" id="youtube-info"><div class="wrap"><div class="kicker">Acompanhe nossa caminhada</div><h2>Estamos no Instagram.</h2><div class="insta-box"><div><strong style="font-size:1.2rem">@ice_church</strong><p>Fotos, vídeos e novidades da nossa comunidade.</p></div><a class="btn light" href="https://www.instagram.com/ice_church/" target="_blank">Visitar Instagram ↗</a></div><p class="muted" style="font-size:.78rem">A galeria automática será ativada após a configuração da integração oficial com a Meta.</p></div></section>
+<section class="section" id="local"><div class="wrap location"><div><div class="kicker">Será bem-vindo</div><h2>Encontre a gente.</h2><p class="muted"><strong>Igreja Cristã Eliel</strong><br>Quadra 04, Lote 02, Jardim dos Ipês<br>Valparaíso de Goiás – GO, Brasil.</p><a class="btn" style="background:var(--g);color:white" href="https://www.google.com/maps/search/?api=1&query=Quadra+04+Lote+02+Jardim+dos+Ip%C3%AAs+Valpara%C3%ADso+de+Goi%C3%A1s+GO" target="_blank">Abrir no Google Maps ↗</a></div><div class="map"><div><strong class="serif" style="font-size:1.5rem">Igreja Cristã Eliel</strong><p>Jardim dos Ipês<br>Valparaíso de Goiás – GO</p></div></div></div></section>
+</main><footer><div class="wrap foot"><div><strong>IGREJA CRISTÃ ELIEL</strong><div class="small">Conhecer a Cristo • Ser como Ele<br>Quinta 19h30 • Domingo 18h</div></div><div class="small"><a href="https://www.instagram.com/ice_church/" target="_blank">@ice_church ↗</a></div></div></footer>
+
+<script>
+let selectedPlayContent = null;
+function contentData(title, description, image, category){
+  return {title,description,image,category:category||'ELIEL PLAY'};
+}
+function openPlay(title, description, image, category){
+  selectedPlayContent=contentData(title,description,image,category);
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalDescription').textContent=description+' Esta é uma prévia de navegação. O conteúdo real será carregado após conectarmos o Instagram e o YouTube.';
+  document.getElementById('modalImage').src=image;
+  document.getElementById('playModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePlay(){
+  document.getElementById('playModal').classList.remove('open');
+  if(!document.getElementById('contentPage').classList.contains('active'))document.body.style.overflow='';
+}
+function openContentPage(item){
+  selectedPlayContent=item||selectedPlayContent;
+  if(!selectedPlayContent)return;
+  document.getElementById('pageTitle').textContent=selectedPlayContent.title;
+  document.getElementById('pageDescription').textContent=selectedPlayContent.description;
+  document.getElementById('pageLongDescription').textContent=selectedPlayContent.description+' Aqui ficará a publicação completa, o vídeo incorporado ou o link original, conforme o tipo de conteúdo e as permissões da plataforma.';
+  document.getElementById('pageCategory').textContent=selectedPlayContent.category;
+  document.getElementById('pageImage').src=selectedPlayContent.image;
+  document.getElementById('contentPlayer').innerHTML='<div class="player-placeholder"><span>▶</span><strong>'+selectedPlayContent.title+'</strong><small>O reprodutor será ativado quando a fonte deste conteúdo for conectada. Publicações do Instagram que não permitirem incorporação abrirão no Instagram.</small></div>';
+  document.getElementById('playModal').classList.remove('open');
+  document.getElementById('contentPage').classList.add('active');
+  document.body.style.overflow='hidden';
+  history.pushState({elielPlay:true},'', '#eliel-play-conteudo');
+  document.getElementById('contentPage').scrollTop=0;
+}
+function closeContentPage(){
+  document.getElementById('contentPage').classList.remove('active');
+  document.body.style.overflow='';
+  if(location.hash==='#eliel-play-conteudo')history.replaceState(null,'',location.pathname+location.search+'#eliel-play');
+}
+document.getElementById('modalFullPage').addEventListener('click',()=>openContentPage(selectedPlayContent));
+window.addEventListener('popstate',()=>{if(document.getElementById('contentPage').classList.contains('active'))closeContentPage()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePlay();closeContentPage()}});
+</script>
+
+</body></html>
